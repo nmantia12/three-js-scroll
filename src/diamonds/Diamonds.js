@@ -10,7 +10,8 @@ import state from "../store"
 
 const dummy = new Object3D()
 export default function Diamonds() {
-  const gltf = useLoader(GLTFLoader, "/diamond.glb")
+	const gltf = useLoader(GLTFLoader, "/diamond.glb")
+	// eslint-disable-next-line
   useMemo(() => gltf.scene.children[0].geometry.center(), [])
 
   const { size, gl, scene, camera, clock } = useThree()
